@@ -1,7 +1,28 @@
 <!DOCTYPE html>
 <html>
-    <meta name="viewport" content="width=device-width, intial-scale=1.0">
-    <meta charset="utf-8">
-    <title>House to Home</title>
-    <link rel="stylesheet" href="./styles.css">
+    <head>
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <meta charset="utf-8">
+        <title>House to Home</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <!-- Intro animation -->
+        <section class="_intro">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player id="-introAnimation" src="https://lottie.host/58b4e78f-e504-40d4-a512-b61018e05ab9/sZNErHtBcY.json"  background="transparent" speed="1" autoplay></lottie-player>
+        </section>
+        <!--  -->
+        <!-- Intro script to setup sizing -->
+        <script>
+            const introAnimation = document.getElementById("-introAnimation");
+            introAnimation.style.width = screen.width + "px";
+            introAnimation.style.height = screen.height + "px";
+        </script>
+        <!-- / -->
+        <main>
+
+        </main>
+    </body>
+    <script src="./scripts.js"></script>
 </html>
