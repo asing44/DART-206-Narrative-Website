@@ -5,24 +5,25 @@
         <meta charset="utf-8">
         <title>House to Home</title>
         <link rel="stylesheet" href="./styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Zilla+Slab:wght@400;600;700&display=swap" rel="stylesheet">
     </head>
     <body>
         <!-- Intro animation -->
         <section class="_intro">
-            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-            <lottie-player id="-introAnimation" src="https://lottie.host/58b4e78f-e504-40d4-a512-b61018e05ab9/sZNErHtBcY.json"  background="transparent" speed="1" autoplay></lottie-player>
+            <div id="-introAnimation"></div>
         </section>
         <!--  -->
-        <!-- Intro script to setup sizing -->
-        <script>
-            const introAnimation = document.getElementById("-introAnimation");
-            introAnimation.style.width = screen.width + "px";
-            introAnimation.style.height = screen.height + "px";
-        </script>
-        <!-- / -->
         <main>
-
+            <section class="_hero" aria-label="The hero section">
+                <div id="-titleAnimation"></div>
+                <div class="_pagination"></div>
+                <img class="_blueprint _heroBlueprint" src="./images/HERO Blueprint Background.png" alt="" height="1080" width="1920">
+            </section>
         </main>
+        <script src="./lottie.js"></script>
+        <script src="./scripts.js"></script>
     </body>
-    <script src="./scripts.js"></script>
+    
 </html>
