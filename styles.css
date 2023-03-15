@@ -1,27 +1,112 @@
-:root {
+/* Root */
 
+:root {
+    --headingFont: 'Zilla Slab', serif;
+    --bodyFont: 'Inter', sans-serif;
+    --lightBackground: #E2EFDE;
+    --darkBackground: #29363B;
+    --lightHighlight: #F4837D;
+    --darkHighlight: #EA495F;
+    --primary: #1E696C;
+    --primaryMedium: #288B7D;
+    --primaryLight: #0FA694;
 }
 
 * {
     box-sizing: border-box;
 }
 
+/* <--/--> */
+
+/* Global */
+
+h1 {
+    font-family: var(--headingFont);
+    font-size: 97px;
+}
+
+h2 {
+    font-family: var(--headingFont);
+    font-size: 61px;
+}
+
+h3 {
+    font-family: var(--headingFont);
+    font-size: 49px;
+}
+
+h4 {
+    font-family: var(--headingFont);
+    font-size: 34px;
+}
+
+h5 {
+    font-family: var(--headingFont);
+    font-size: 24px;
+}
+
+h6 {
+    font-family: var(--headingFont);
+    font-size: 20px;
+}
+
+caption {
+    font-family: var(--bodyFont);
+    font-size: 10px;
+}
+
+section {
+    z-index: 2;
+}
+
+/* <--/--> */
+
 body {
     position: relative;
     height: auto;
     width: 100vw;
     margin: 0;
+    font-size: 14px;    
+    font-family: var(--bodyFont);
 }
 
+/* Intro */
+
 ._intro {
+    /* display: none; */
     position: absolute;
     height: 100vh;
     width: 100vw;
-    background-color: teal;
-}
-
-#-introAnimation {
-    position: absolute;
     top: 0;
     left: 0;
+    overflow: hidden;
+    z-index: 800;
+}
+
+/* <--/--> */
+
+/* Hero */
+
+._hero {
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--darkBackground);
+}
+
+
+._blueprint {
+    position: absolute;
+    z-index: -1;
+    mix-blend-mode: screen;
+}
+
+#-titleAnimation {
+
 }
