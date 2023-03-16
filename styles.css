@@ -26,8 +26,10 @@ h1 {
 }
 
 h2 {
+    margin: 0 0 2rem 0;
     font-family: var(--headingFont);
     font-size: 61px;
+    color: var(--darkHighlight);
 }
 
 h3 {
@@ -41,13 +43,20 @@ h4 {
 }
 
 h5 {
+    margin: 1rem 0 0.5rem 0;
     font-family: var(--headingFont);
     font-size: 24px;
+    color: var(--lightHighlight);
 }
 
 h6 {
     font-family: var(--headingFont);
     font-size: 20px;
+}
+
+p {
+    line-height: 2em;
+    text-align: left;
 }
 
 caption {
@@ -57,6 +66,34 @@ caption {
 
 section {
     z-index: 2;
+}
+
+._section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 2rem;
+    background-color: var(--lightBackground);
+}
+
+._text {
+    position: relative;
+    margin-left: 2em;
+}
+
+._textBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: screen;
+    z-index: -1;
+}
+
+#-paginationAnimation {
+    position: fixed;
+    background-color: transparent;
+    z-index: 900;
 }
 
 /* <--/--> */
@@ -80,7 +117,7 @@ body {
     top: 0;
     left: 0;
     overflow: hidden;
-    z-index: 800;
+    z-index: 950;
 }
 
 /* <--/--> */
@@ -107,6 +144,15 @@ body {
     mix-blend-mode: screen;
 }
 
-#-titleAnimation {
+/* <--/--> */
 
+/* THE QUESTION */
+
+._question {
+    display: flex;
+
+}
+
+._questionBackground {
+    mask-image: linear-gradient(to right, white 50%, transparent);
 }
