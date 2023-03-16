@@ -10,12 +10,21 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Zilla+Slab:wght@400;600;700&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="./firstImpression.min.js"></script>
     </head>
-    <body>
+    <body class="_open">
         <!-- Intro animation -->
-        <section class="_intro">
+        <section class="_intro _first">
             <div id="-introAnimation"></div>
         </section>
+        <script>
+            if (firstImpression()) {
+                console.log("New user")
+                document.getElementsByClassName("_intro")[0].classList.remove("_first")
+            } else {
+                document.body.classList.remove("_open");
+            }
+        </script>
         <!--  -->
         <div id="-paginationAnimation"></div>
         <main>
@@ -31,6 +40,7 @@
                 </div>
                 <img class="_textBackground _questionBackground" src="/Images/THE QUESTION Text Background.png" alt="">
                 <div class="_illustration _questionIllustration"></div>
+                <img class="_blueprint _questionBlueprint" src="./Images/THE QUESTION Blueprint Background.png" alt="" height="1080" width="1920">
             </section>
         </main>
         <script src="./lottie.js"></script>
