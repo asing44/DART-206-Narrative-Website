@@ -71,19 +71,22 @@ const _sectionStarts = [_sectionIncrements, _sectionIncrements * 2, _sectionIncr
 window.onscroll = function() {
     var _scrollPosition = document.documentElement.scrollTop;
 
-    console.log("Current position: " + _scrollPosition, "Document height: " + _pageHeight);
+    // console.log("Current position: " + _scrollPosition, "Document height: " + _pageHeight);
 
     _paginationAnimation.goToAndStop(mapNumbers(_scrollPosition, 0, _pageHeight, 50, 330), true)
+    console.log(_paginationAnimation.currentFrame);
 
     if ((_scrollPosition > _sectionStarts[0]) && (_scrollPosition < _sectionStarts[1])) {
+        questionAnimation.setDirection(1);
         questionAnimation.play();
     } else if (_scrollPosition > _sectionStarts[1]) {
         questionAnimation.setDirection(-1);
+        questionAnimation.play();
     }
 };
 
 // <--Pagination color change-->
 
 
-
+//71 87
 // <--/-->
