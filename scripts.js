@@ -34,6 +34,14 @@ var questionAnimation = bodymovin.loadAnimation({
     path: "./JSON FILES/theQuestionIllustration.json",
 });
 
+var questionLines = bodymovin.loadAnimation({
+    container: document.getElementById("-questionLines"),
+    renderer: "svg",
+    autoplay: true,
+    loop: true,
+    path: "./JSON FILES/questionLines.json"
+});
+
 // <--/-->
 
 // <--Check if user it is the user's first time on the site-->
@@ -74,12 +82,15 @@ window.onscroll = function() {
     // console.log("Current position: " + _scrollPosition, "Document height: " + _pageHeight);
 
     _paginationAnimation.goToAndStop(mapNumbers(_scrollPosition, 0, _pageHeight, 50, 330), true)
-    console.log(_paginationAnimation.currentFrame);
+    
+    // console.log(_paginationAnimation.currentFrame);
 
     if ((_scrollPosition > _sectionStarts[0]) && (_scrollPosition < _sectionStarts[1])) {
+        questionAnimation.setSpeed(1);
         questionAnimation.setDirection(1);
         questionAnimation.play();
     } else if (_scrollPosition > _sectionStarts[1]) {
+        questionAnimation.setSpeed(2);
         questionAnimation.setDirection(-1);
         questionAnimation.play();
     }

@@ -57,6 +57,7 @@ h6 {
 p {
     line-height: 2em;
     text-align: left;
+    font-family: var(--bodyFont);
 }
 
 caption {
@@ -64,32 +65,50 @@ caption {
     font-size: 10px;
 }
 
-section {
-    padding: 0;
-    z-index: 2;
-    overflow-y: hidden;
-}
-
 ._section {
     position: relative;
     height: 125vh;
     width: 100%;
-    margin: 0;
-    padding: 2rem;
+    margin: 5% 0 0 0;
+    padding: 0 2%;
     background-color: var(--lightBackground);
+    z-index: 2;
+    overflow: hidden;
+}
+
+._sectionDivider {
+    position: absolute;
+    height: 5%;
+    width: 100%;
 }
 
 ._text {
     position: relative;
+    height: auto;
+    max-width: 50%;
     margin-left: 2em;
 }
 
 ._textBackground {
     position: absolute;
+    height: 50%;
+    width: fit-content;
     top: 0;
     left: 0;
     mix-blend-mode: screen;
+    mask-image: linear-gradient(to right, white 50%, transparent);
     z-index: -1;
+}
+
+._illustration {
+    position: absolute;
+    bottom: -1%;
+}
+
+._lines {
+    position: absolute;
+    height: 100%;
+    width: 100%;
 }
 
 #-paginationAnimation {
@@ -107,6 +126,7 @@ body {
     margin: 0;
     font-size: 14px;    
     font-family: var(--bodyFont);
+    background-color: var(--lightBackground);
 }
 
 /* Intro */
@@ -146,19 +166,46 @@ body {
 ._blueprint {
     position: absolute;
     z-index: -1;
-    opacity: 50%;
+    opacity: 25%;
+    mix-blend-mode: multiply;
 }
 
 /* <--/--> */
 
-/* THE QUESTION */
+/* Sections */
 
-._question {
+._questionSectionDivider {
+    background-image: linear-gradient(to bottom, #29363B, #345995);
+}
+
+._decisionSectionDivider {
+    background-color: #0a3200;
+}
+
+._moveSectionDivider {
+    background-color: #f4bfdb;
+}
+
+._revealSectionDivider {
+    background-color: #99b998;
+}
+
+._homeSectionDivider {
+    background-color: #05b2dc;
+}
+
+/* <--/--> */
+
+/* Footer */
+
+footer {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vh;
+    width: 100%;
+    background-color: var(--primaryLight);
+    color: var(--lightBackground);
 }
 
-
-
-._questionBackground {
-    mask-image: linear-gradient(to right, white 50%, transparent);
-}
+/*  */
