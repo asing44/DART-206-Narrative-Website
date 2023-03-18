@@ -26,6 +26,20 @@ var _paginationAnimation = bodymovin.loadAnimation({
 
 var _titleAnimation = bodymovin.loadAnimation(_titleAnimationData);
 
+var questionAnimation = bodymovin.loadAnimation({
+    container: document.getElementById("-questionIllustration"),
+    renderer: "svg",
+    autoplay: false,
+    loop: false,
+    path: "./JSON FILES/theQuestionIllustration.json",
+});
+
+// <--/-->
+
+// <--Check if user it is the user's first time on the site-->
+
+if (firstImpression()) {
+
 _introAnimationData.addEventListener("complete", () => {
 
     setInterval(() => {
@@ -34,15 +48,35 @@ _introAnimationData.addEventListener("complete", () => {
     }, 500);
 });
 
+} else {
+    _titleAnimation.play();
+}
+
+// <--/-->
+
+// <--Animate based on view code-->
+
+function mapNumbers(number, inMin, inMax, outMin, outMax) {
+    return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
+}
+
+const _paginationFrame1 = document.getElementsByClassName("_paginationFrame1")[0];
+const _paginationFrame2 = document.getElementsByClassName("_paginationFrame2")[0];
+const _pageHeight = document.body.scrollHeight;
+const _sectionIncrements = _pageHeight / 6;
+const _sectionStarts = [_sectionIncrements, _sectionIncrements * 2, _sectionIncrements * 3, _sectionIncrements * 4, _sectionIncrements * 5];
+
+
 window.onscroll = function() {
     var _scrollPosition = document.documentElement.scrollTop;
-    var _windowHeight = window.innerHeight;
 
-    var _paginationAnimationDuration = _paginationAnimation.getDuration(true);
-    var _startFrame = Math.round((_scrollPosition / _windowHeight) * _paginationAnimationDuration);
-    var _endFrame = Math.round(((_scrollPosition + _windowHeight) / _windowHeight) * _paginationAnimationDuration);
+    // console.log("Current position: " + _scrollPosition, "Document height: " + _pageHeight);
 
-    _paginationAnimation.playSegments([_startFrame, _endFrame], true);
+    _paginationAnimation.goToAndStop(mapNumbers(_scrollPosition, 0, _pageHeight, 50, 330), true)
+
+    if ((_scrollPosition > 0) && (_scrollPosition < _sectionStarts[1])) {
+        questionAnimation.play();
+    }
 };
 
 // function _animatePagination() {
@@ -50,7 +84,6 @@ window.onscroll = function() {
 //     _paginationAnimation.goToAndStop(_scrollPosition, true);
 // }
 
-setInterval(function() {
-    var currentFrame = _paginationAnimation.currentFrame;
-    console.log("Current frame: " + currentFrame)
-}, 500);
+// })
+
+// <--/-->
