@@ -67,13 +67,15 @@ caption {
 section {
     padding: 0;
     z-index: 2;
+    overflow-y: hidden;
 }
 
 ._section {
     position: relative;
-    height: 100vh;
+    height: 125vh;
     width: 100%;
     margin: 0;
+    padding: 2rem;
     background-color: var(--lightBackground);
 }
 
@@ -110,7 +112,6 @@ body {
 /* Intro */
 
 ._intro {
-    /* display: none; */
     position: absolute;
     height: 100vh;
     width: 100vw;
@@ -118,6 +119,10 @@ body {
     left: 0;
     overflow: hidden;
     z-index: 950;
+}
+
+._hideIntro {
+    display: none;
 }
 
 /* <--/--> */
@@ -141,7 +146,7 @@ body {
 ._blueprint {
     position: absolute;
     z-index: -1;
-    mix-blend-mode: screen;
+    opacity: 50%;
 }
 
 /* <--/--> */
@@ -150,8 +155,9 @@ body {
 
 ._question {
     display: flex;
-
 }
+
+
 
 ._questionBackground {
     mask-image: linear-gradient(to right, white 50%, transparent);

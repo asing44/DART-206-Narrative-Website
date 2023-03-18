@@ -40,13 +40,15 @@ var questionAnimation = bodymovin.loadAnimation({
 
 if (firstImpression()) {
 
-_introAnimationData.addEventListener("complete", () => {
+    document.getElementsByClassName("_intro")[0].classList.remove("_hideIntro");
 
-    setInterval(() => {
-        _titleAnimation.play();
-        _paginationAnimation.play();
-    }, 500);
-});
+    _introAnimationData.addEventListener("complete", () => {
+
+        setInterval(() => {
+            _titleAnimation.play();
+            _paginationAnimation.play();
+        }, 500);
+    });
 
 } else {
     _titleAnimation.play();
@@ -63,27 +65,25 @@ function mapNumbers(number, inMin, inMax, outMin, outMax) {
 const _paginationFrame1 = document.getElementsByClassName("_paginationFrame1")[0];
 const _paginationFrame2 = document.getElementsByClassName("_paginationFrame2")[0];
 const _pageHeight = document.body.scrollHeight;
-const _sectionIncrements = _pageHeight / 6;
+const _sectionIncrements = (_pageHeight / 6) / 2;
 const _sectionStarts = [_sectionIncrements, _sectionIncrements * 2, _sectionIncrements * 3, _sectionIncrements * 4, _sectionIncrements * 5];
-
 
 window.onscroll = function() {
     var _scrollPosition = document.documentElement.scrollTop;
 
-    // console.log("Current position: " + _scrollPosition, "Document height: " + _pageHeight);
+    console.log("Current position: " + _scrollPosition, "Document height: " + _pageHeight);
 
     _paginationAnimation.goToAndStop(mapNumbers(_scrollPosition, 0, _pageHeight, 50, 330), true)
 
-    if ((_scrollPosition > 0) && (_scrollPosition < _sectionStarts[1])) {
+    if ((_scrollPosition > _sectionStarts[0]) && (_scrollPosition < _sectionStarts[1])) {
         questionAnimation.play();
+    } else if (_scrollPosition > _sectionStarts[1]) {
+        questionAnimation.setDirection(-1);
     }
 };
 
-// function _animatePagination() {
-//     var _scrollPosition = window.pageYOffset;
-//     _paginationAnimation.goToAndStop(_scrollPosition, true);
-// }
+// <--Pagination color change-->
 
-// })
+
 
 // <--/-->
