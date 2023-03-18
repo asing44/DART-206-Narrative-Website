@@ -83,18 +83,18 @@ caption {
 }
 
 ._text {
-    position: relative;
+    position: absolute;
     height: auto;
-    max-width: 50%;
-    margin-left: 2em;
+    max-width: 30%;
+    margin: 2em 0 0 2em;
 }
 
 ._textBackground {
     position: absolute;
+    top: 0;
     height: 50%;
     width: fit-content;
-    top: 0;
-    left: 0;
+    margin-top: 2em;
     mix-blend-mode: screen;
     mask-image: linear-gradient(to right, white 50%, transparent);
     z-index: -1;
@@ -178,8 +178,22 @@ body {
     background-image: linear-gradient(to bottom, #29363B, #345995);
 }
 
+._questionBackground {
+    left: 0;
+}
+
 ._decisionSectionDivider {
     background-color: #0a3200;
+}
+
+._decisionText {
+    right: 15%;
+    top: 5%;
+}
+
+._decisionBackground {
+    right: 0;
+    mask-image: linear-gradient(to left, white 50%, transparent);
 }
 
 ._moveSectionDivider {
