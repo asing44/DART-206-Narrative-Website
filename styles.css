@@ -20,6 +20,16 @@
 
 /* Global */
 
+body {
+    position: relative;
+    height: auto;
+    width: 100vw;
+    margin: 0;
+    font-size: 14px;    
+    font-family: var(--bodyFont);
+    background-color: var(--lightBackground);
+}
+
 h1 {
     font-family: var(--headingFont);
     font-size: 97px;
@@ -109,7 +119,20 @@ caption {
     position: absolute;
     height: 100%;
     width: 100%;
+    z-index: 500;
 }
+
+._blueprint {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    opacity: 25%;
+    mix-blend-mode: multiply;
+}
+
+/* <--/--> */
+
+/* <--Pagination animation--> */
 
 #-paginationAnimation {
     position: fixed;
@@ -118,16 +141,6 @@ caption {
 }
 
 /* <--/--> */
-
-body {
-    position: relative;
-    height: auto;
-    width: 100vw;
-    margin: 0;
-    font-size: 14px;    
-    font-family: var(--bodyFont);
-    background-color: var(--lightBackground);
-}
 
 /* Intro */
 
@@ -160,14 +173,6 @@ body {
     height: 100vh;
     width: 100vw;
     background-color: var(--darkBackground);
-}
-
-
-._blueprint {
-    position: absolute;
-    z-index: -1;
-    opacity: 25%;
-    mix-blend-mode: multiply;
 }
 
 /* <--/--> */
