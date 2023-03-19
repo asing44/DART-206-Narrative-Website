@@ -3,7 +3,7 @@ var _titleAnimationData = {
     renderer: "svg",
     autoplay: false,
     loop: false,
-    path: "./JSON Files/titleAnimation.json",
+    path: "JSON Files/titleAnimation.json",
 };
 
 var heroLines = bodymovin.loadAnimation({
@@ -11,7 +11,7 @@ var heroLines = bodymovin.loadAnimation({
     renderer: "svg",
     autoplay: false,
     loop: true,
-    path: "./JSON FILES/heroLines.json",
+    path: "JSON FILES/heroLines.json",
 });
 
 var _introAnimationData = bodymovin.loadAnimation({
@@ -19,7 +19,7 @@ var _introAnimationData = bodymovin.loadAnimation({
     renderer: "svg",
     autoplay: true,
     loop: false,
-    path: "./JSON FILES/introAnimation.json",
+    path: "JSON FILES/introAnimation.json",
 });
 
 var _paginationAnimation = bodymovin.loadAnimation({
@@ -27,7 +27,7 @@ var _paginationAnimation = bodymovin.loadAnimation({
     renderer: "svg",
     autoplay: false,
     loop: false,
-    path: "./JSON FILES/paginationAnimation.json",
+    path: "JSON FILES/paginationAnimation.json",
 });
 
 var _titleAnimation = bodymovin.loadAnimation(_titleAnimationData);
@@ -37,7 +37,7 @@ var questionAnimation = bodymovin.loadAnimation({
     renderer: "svg",
     autoplay: false,
     loop: false,
-    path: "./JSON FILES/theQuestionIllustration.json",
+    path: "JSON FILES/theQuestionIllustration.json",
 });
 
 var questionLines = bodymovin.loadAnimation({
@@ -45,7 +45,7 @@ var questionLines = bodymovin.loadAnimation({
     renderer: "svg",
     autoplay: true,
     loop: true,
-    path: "./JSON FILES/questionLines.json",
+    path: "JSON FILES/questionLines.json",
 });
 
 var decisionAnimation = bodymovin.loadAnimation({
@@ -53,7 +53,7 @@ var decisionAnimation = bodymovin.loadAnimation({
     render: "svg",
     autoplay: false,
     loop: false,
-    path: "./JSON FILES/theDecisionIllustration.json",
+    path: "JSON FILES/theDecisionIllustration.json",
 });
 
 var decisionLines = bodymovin.loadAnimation({
@@ -61,7 +61,7 @@ var decisionLines = bodymovin.loadAnimation({
     render: "svg",
     autoplay: true,
     loop: true,
-    path: "./JSON FILES/decisionLines.json",
+    path: "JSON FILES/decisionLines.json",
 })
 
 var moveLines = bodymovin.loadAnimation({
@@ -69,7 +69,7 @@ var moveLines = bodymovin.loadAnimation({
     render: "svg",
     autoplay: true,
     loop: true,
-    path: "./JSON FILES/moveLines.json",
+    path: "JSON FILES/moveLines.json",
 })
 
 var moveAnimation = bodymovin.loadAnimation({
@@ -77,7 +77,7 @@ var moveAnimation = bodymovin.loadAnimation({
     render: "svg",
     autoplay: false,
     loop: false,
-    path: "./JSON FILES/theMoveIllustration.json",
+    path: "JSON FILES/theMoveIllustration.json",
 });
 
 var revealLines = bodymovin.loadAnimation({
@@ -85,7 +85,7 @@ var revealLines = bodymovin.loadAnimation({
     render: "svg",
     autoplay: true,
     loop: true,
-    path: "./JSON FILES/revealLines.json",
+    path: "JSON FILES/revealLines.json",
 })
 
 var revealAnimation = bodymovin.loadAnimation({
@@ -93,7 +93,7 @@ var revealAnimation = bodymovin.loadAnimation({
     render: "svg",
     autoplay: false,
     loop: false,
-    path: "./JSON FILES/theRevealIllustration.json",
+    path: "JSON FILES/theRevealIllustration.json",
 });
 
 var homeLines = bodymovin.loadAnimation({
@@ -101,7 +101,7 @@ var homeLines = bodymovin.loadAnimation({
     render: "svg",
     autoplay: true,
     loop: true,
-    path: "./JSON FILES/homeLines.json",
+    path: "JSON FILES/homeLines.json",
 })
 
 var homeAnimation = bodymovin.loadAnimation({
@@ -109,7 +109,7 @@ var homeAnimation = bodymovin.loadAnimation({
     render: "svg",
     autoplay: false,
     loop: false,
-    path: "./JSON FILES/theHomeIllustration.json",
+    path: "JSON FILES/theHomeIllustration.json",
 });
 
 // <--/-->
