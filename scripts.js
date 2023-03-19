@@ -214,8 +214,4 @@ window.onscroll = function() {
 
 };
 
-// <--Pagination color change-->
-
-
-//71 87
-// <--/-->
+console.log("test")
