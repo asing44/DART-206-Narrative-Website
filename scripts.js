@@ -160,7 +160,7 @@ window.onscroll = function() {
 
     _paginationAnimation.goToAndStop(mapNumbers(_scrollPosition, 0, _pageHeight, 50, 320), true)
     
-    console.log(_paginationAnimation.currentFrame);
+    // console.log(_paginationAnimation.currentFrame);
 
     if ((_scrollPosition > _sectionStarts[0]) && (_scrollPosition < _sectionStarts[1])) {
         questionAnimation.setSpeed(1);
