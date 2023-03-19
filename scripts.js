@@ -1,5 +1,3 @@
-
-
 var _titleAnimationData = {
     container: document.getElementById("-titleAnimation"),
     renderer: "svg",
@@ -7,6 +5,14 @@ var _titleAnimationData = {
     loop: false,
     path: "./JSON Files/titleAnimation.json",
 };
+
+var heroLines = bodymovin.loadAnimation({
+    container: document.getElementById("-heroLines"),
+    renderer: "svg",
+    autoplay: false,
+    loop: true,
+    path: "./JSON FILES/heroLines.json",
+});
 
 var _introAnimationData = bodymovin.loadAnimation({
     container: document.getElementById("-introAnimation"),
@@ -45,7 +51,7 @@ var questionLines = bodymovin.loadAnimation({
 var decisionAnimation = bodymovin.loadAnimation({
     container: document.getElementById("-decisionIllustration"),
     render: "svg",
-    autoplay: true,
+    autoplay: false,
     loop: false,
     path: "./JSON FILES/theDecisionIllustration.json",
 });
@@ -69,16 +75,50 @@ var moveLines = bodymovin.loadAnimation({
 var moveAnimation = bodymovin.loadAnimation({
     container: document.getElementById("-moveIllustration"),
     render: "svg",
-    autoplay: true,
+    autoplay: false,
     loop: false,
     path: "./JSON FILES/theMoveIllustration.json",
+});
+
+var revealLines = bodymovin.loadAnimation({
+    container: document.getElementById("-revealLines"),
+    render: "svg",
+    autoplay: true,
+    loop: true,
+    path: "./JSON FILES/revealLines.json",
+})
+
+var revealAnimation = bodymovin.loadAnimation({
+    container: document.getElementById("-revealIllustration"),
+    render: "svg",
+    autoplay: false,
+    loop: false,
+    path: "./JSON FILES/theRevealIllustration.json",
+});
+
+var homeLines = bodymovin.loadAnimation({
+    container: document.getElementById("-homeLines"),
+    render: "svg",
+    autoplay: true,
+    loop: true,
+    path: "./JSON FILES/homeLines.json",
+})
+
+var homeAnimation = bodymovin.loadAnimation({
+    container: document.getElementById("-homeIllustration"),
+    render: "svg",
+    autoplay: false,
+    loop: false,
+    path: "./JSON FILES/theHomeIllustration.json",
 });
 
 // <--/-->
 
 // <--Check if user it is the user's first time on the site-->
 
-if (firstImpression()) {
+const _enableFirstImpression = false;
+
+if ((firstImpression()) || !_enableFirstImpression) {
 
     document.getElementsByClassName("_intro")[0].classList.remove("_hideIntro");
 
@@ -86,12 +126,19 @@ if (firstImpression()) {
 
         setInterval(() => {
             _titleAnimation.play();
-            _paginationAnimation.play();
+            
+            _paginationAnimation.goToAndStop(51, true);
+            setInterval(() => {
+                heroLines.play();
+            }, 4000);
         }, 500);
     });
 
 } else {
     _titleAnimation.play();
+    setInterval(() => {
+        heroLines.play();
+    }, 4000);
 }
 
 // <--/-->
@@ -103,7 +150,7 @@ function mapNumbers(number, inMin, inMax, outMin, outMax) {
 }
 
 const _pageHeight = document.body.scrollHeight;
-const _sectionHeights = document.getElementsByClassName("_hero")[0].offsetHeight;
+const _sectionHeights = document.getElementsByClassName("_section _question")[0].offsetHeight;
 const _sectionStarts = [_sectionHeights, _sectionHeights * 2, _sectionHeights * 3, _sectionHeights * 4, _sectionHeights * 5];
 
 window.onscroll = function() {
@@ -111,9 +158,9 @@ window.onscroll = function() {
 
     // console.log("Current position: " + _scrollPosition, "Document height: " + _pageHeight);
 
-    _paginationAnimation.goToAndStop(mapNumbers(_scrollPosition, 0, _pageHeight, 50, 330), true)
+    _paginationAnimation.goToAndStop(mapNumbers(_scrollPosition, 0, _pageHeight, 50, 320), true)
     
-    // console.log(_paginationAnimation.currentFrame);
+    console.log(_paginationAnimation.currentFrame);
 
     if ((_scrollPosition > _sectionStarts[0]) && (_scrollPosition < _sectionStarts[1])) {
         questionAnimation.setSpeed(1);
@@ -126,7 +173,6 @@ window.onscroll = function() {
     }
 
     if ((_scrollPosition > _sectionStarts[1]) && (_scrollPosition < _sectionStarts[2])) {
-        console.log("START DECISION")
         decisionAnimation.setSpeed(1);
         decisionAnimation.setDirection(1);
         decisionAnimation.play();
@@ -137,7 +183,6 @@ window.onscroll = function() {
     }
 
     if ((_scrollPosition > _sectionStarts[2]) && (_scrollPosition < _sectionStarts[3])) {
-        console.log("START DECISION")
         moveAnimation.setSpeed(1);
         moveAnimation.setDirection(1);
         moveAnimation.play();
@@ -145,6 +190,26 @@ window.onscroll = function() {
         moveAnimation.setSpeed(2);
         moveAnimation.setDirection(-1);
         moveAnimation.play();
+    }
+
+    if ((_scrollPosition > _sectionStarts[3]) && (_scrollPosition < _sectionStarts[4])) {
+        revealAnimation.setSpeed(1);
+        revealAnimation.setDirection(1);
+        revealAnimation.play();
+    } else if ((_scrollPosition > _sectionStarts[4]) || (_scrollPosition < _sectionStarts[3])) {
+        revealAnimation.setSpeed(2);
+        revealAnimation.setDirection(-1);
+        revealAnimation.play();
+    }
+
+    if (_scrollPosition > _sectionStarts[4]) {
+        homeAnimation.setSpeed(1);
+        homeAnimation.setDirection(1);
+        homeAnimation.play();
+    } else if (_scrollPosition < _sectionStarts[4]) {
+        homeAnimation.setSpeed(2);
+        homeAnimation.setDirection(-1);
+        homeAnimation.play();
     }
 
 };

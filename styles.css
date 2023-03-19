@@ -75,69 +75,20 @@ caption {
     font-size: 10px;
 }
 
-._section {
-    position: relative;
-    height: 125vh;
-    width: 100%;
-    margin: 5% 0 0 0;
-    padding: 0 2%;
-    background-color: var(--lightBackground);
-    z-index: 2;
-    overflow: hidden;
-}
-
-._sectionDivider {
-    position: absolute;
-    height: 5%;
-    width: 100%;
-}
-
-._text {
-    position: absolute;
-    height: auto;
-    max-width: 30%;
-    margin: 2em 0 0 2em;
-}
-
-._textBackground {
-    position: absolute;
-    top: 0;
-    height: 50%;
-    width: fit-content;
-    margin-top: 2em;
-    mix-blend-mode: screen;
-    mask-image: linear-gradient(to right, white 50%, transparent);
-    z-index: -1;
-}
-
-._illustration {
-    position: absolute;
-    bottom: -1%;
-}
-
-._lines {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: 500;
-}
-
-._blueprint {
-    position: absolute;
-    bottom: 0;
-    z-index: -1;
-    opacity: 25%;
-    mix-blend-mode: multiply;
-}
-
 /* <--/--> */
 
-/* <--Pagination animation--> */
+/* <--Animations--> */
 
 #-paginationAnimation {
     position: fixed;
     background-color: transparent;
     z-index: 900;
+}
+
+#-heroLines {
+    transform: 
+        translateX(-0.55%)
+        translateY(-3%)
 }
 
 /* <--/--> */
@@ -179,6 +130,62 @@ caption {
 
 /* Sections */
 
+._section {
+    position: relative;
+    height: 125vh;
+    width: 100%;
+    margin: 5% 0 0 0;
+    padding: 0 2%;
+    background-color: var(--lightBackground);
+    z-index: 2;
+    overflow: hidden;
+}
+
+._sectionDivider {
+    position: absolute;
+    height: 1vh;
+    width: 100%;
+    opacity: 50%;
+}
+
+._text {
+    position: absolute;
+    height: auto;
+    max-width: 30%;
+    margin: 2em 0 0 2em;
+}
+
+._textBackground {
+    position: absolute;
+    top: 0;
+    height: 50%;
+    width: fit-content;
+    margin-top: 2em;
+    mix-blend-mode: screen;
+    mask-image: linear-gradient(to right, white 50%, transparent);
+    z-index: -1;
+}
+
+._illustration {
+    position: absolute;
+    bottom: -1%;
+}
+
+._lines {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 500;
+}
+
+._blueprint {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    opacity: 25%;
+    mix-blend-mode: multiply;
+}
+
 ._questionSectionDivider {
     background-image: linear-gradient(to bottom, #29363B, #345995);
 }
@@ -191,12 +198,12 @@ caption {
     background-color: #0a3200;
 }
 
-._decisionText {
+._decisionText, ._revealText, ._homeText {
     right: 15%;
     top: 5%;
 }
 
-._decisionBackground {
+._decisionBackground, ._revealBackground, ._homeBackground {
     right: 0;
     mask-image: linear-gradient(to left, white 50%, transparent);
 }
@@ -213,6 +220,12 @@ caption {
     background-color: #05b2dc;
 }
 
+#-inlineHome {
+    transform: 
+    translateY(25%)
+    scale(0.90);
+}
+
 /* <--/--> */
 
 /* Footer */
@@ -223,7 +236,7 @@ footer {
     justify-content: center;
     height: 5vh;
     width: 100%;
-    background-color: var(--primaryLight);
+    background-color: var(--darkBackground);
     color: var(--lightBackground);
 }
 
