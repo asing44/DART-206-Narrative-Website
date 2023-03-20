@@ -3,7 +3,7 @@ var _titleAnimationData = {
     renderer: "svg",
     autoplay: false,
     loop: false,
-    path: "JSON Files/titleAnimation.json",
+    path: "JSON/titleAnimation.json",
 };
 
 var heroLines = lottie.loadAnimation({
@@ -11,7 +11,7 @@ var heroLines = lottie.loadAnimation({
     renderer: "svg",
     autoplay: false,
     loop: true,
-    path: "JSON FILES/heroLines.json",
+    path: "JSON/heroLines.json",
 });
 
 var _introAnimationData = lottie.loadAnimation({
@@ -19,7 +19,7 @@ var _introAnimationData = lottie.loadAnimation({
     renderer: "svg",
     autoplay: true,
     loop: false,
-    path: "JSON FILES/introAnimation.json",
+    path: "JSON/introAnimation.json",
 });
 
 var _paginationAnimation = lottie.loadAnimation({
@@ -27,7 +27,7 @@ var _paginationAnimation = lottie.loadAnimation({
     renderer: "svg",
     autoplay: false,
     loop: false,
-    path: "JSON FILES/paginationAnimation.json",
+    path: "JSON/paginationAnimation.json",
 });
 
 var _titleAnimation = lottie.loadAnimation(_titleAnimationData);
@@ -37,7 +37,7 @@ var questionAnimation = lottie.loadAnimation({
     renderer: "svg",
     autoplay: false,
     loop: false,
-    path: "JSON FILES/theQuestionIllustration.json",
+    path: "JSON/theQuestionIllustration.json",
 });
 
 var questionLines = lottie.loadAnimation({
@@ -45,7 +45,7 @@ var questionLines = lottie.loadAnimation({
     renderer: "svg",
     autoplay: true,
     loop: true,
-    path: "JSON FILES/questionLines.json",
+    path: "JSON/questionLines.json",
 });
 
 var decisionAnimation = lottie.loadAnimation({
@@ -53,7 +53,7 @@ var decisionAnimation = lottie.loadAnimation({
     render: "svg",
     autoplay: false,
     loop: false,
-    path: "JSON FILES/theDecisionIllustration.json",
+    path: "JSON/theDecisionIllustration.json",
 });
 
 var decisionLines = lottie.loadAnimation({
@@ -61,7 +61,7 @@ var decisionLines = lottie.loadAnimation({
     render: "svg",
     autoplay: true,
     loop: true,
-    path: "JSON FILES/decisionLines.json",
+    path: "JSON/decisionLines.json",
 })
 
 var moveLines = lottie.loadAnimation({
@@ -69,7 +69,7 @@ var moveLines = lottie.loadAnimation({
     render: "svg",
     autoplay: true,
     loop: true,
-    path: "JSON FILES/moveLines.json",
+    path: "JSON/moveLines.json",
 })
 
 var moveAnimation = lottie.loadAnimation({
@@ -77,7 +77,7 @@ var moveAnimation = lottie.loadAnimation({
     render: "svg",
     autoplay: false,
     loop: false,
-    path: "JSON FILES/theMoveIllustration.json",
+    path: "JSON/theMoveIllustration.json",
 });
 
 var revealLines = lottie.loadAnimation({
@@ -85,7 +85,7 @@ var revealLines = lottie.loadAnimation({
     render: "svg",
     autoplay: true,
     loop: true,
-    path: "JSON FILES/revealLines.json",
+    path: "JSON/revealLines.json",
 })
 
 var revealAnimation = lottie.loadAnimation({
@@ -93,7 +93,7 @@ var revealAnimation = lottie.loadAnimation({
     render: "svg",
     autoplay: false,
     loop: false,
-    path: "JSON FILES/theRevealIllustration.json",
+    path: "JSON/theRevealIllustration.json",
 });
 
 var homeLines = lottie.loadAnimation({
@@ -101,7 +101,7 @@ var homeLines = lottie.loadAnimation({
     render: "svg",
     autoplay: true,
     loop: true,
-    path: "JSON FILES/homeLines.json",
+    path: "JSON/homeLines.json",
 })
 
 var homeAnimation = lottie.loadAnimation({
@@ -109,7 +109,7 @@ var homeAnimation = lottie.loadAnimation({
     render: "svg",
     autoplay: false,
     loop: false,
-    path: "JSON FILES/theHomeIllustration.json",
+    path: "./JSON/theHomeIllustration.json",
 });
 
 // <--/-->
@@ -213,5 +213,3 @@ window.onscroll = function() {
     }
 
 };
-
-console.log("test")
