@@ -126,8 +126,6 @@ if ((firstImpression()) || !_enableFirstImpression) {
 
         setInterval(() => {
             _titleAnimation.play();
-            
-            _paginationAnimation.goToAndStop(51, true);
             setInterval(() => {
                 heroLines.play();
             }, 4000);
