@@ -6,7 +6,7 @@ var _titleAnimationData = {
     path: "JSON Files/titleAnimation.json",
 };
 
-var heroLines = bodymovin.loadAnimation({
+var heroLines = lottie.loadAnimation({
     container: document.getElementById("-heroLines"),
     renderer: "svg",
     autoplay: false,
@@ -14,7 +14,7 @@ var heroLines = bodymovin.loadAnimation({
     path: "JSON FILES/heroLines.json",
 });
 
-var _introAnimationData = bodymovin.loadAnimation({
+var _introAnimationData = lottie.loadAnimation({
     container: document.getElementById("-introAnimation"),
     renderer: "svg",
     autoplay: true,
@@ -22,7 +22,7 @@ var _introAnimationData = bodymovin.loadAnimation({
     path: "JSON FILES/introAnimation.json",
 });
 
-var _paginationAnimation = bodymovin.loadAnimation({
+var _paginationAnimation = lottie.loadAnimation({
     container: document.getElementById("-paginationAnimation"),
     renderer: "svg",
     autoplay: false,
@@ -30,9 +30,9 @@ var _paginationAnimation = bodymovin.loadAnimation({
     path: "JSON FILES/paginationAnimation.json",
 });
 
-var _titleAnimation = bodymovin.loadAnimation(_titleAnimationData);
+var _titleAnimation = lottie.loadAnimation(_titleAnimationData);
 
-var questionAnimation = bodymovin.loadAnimation({
+var questionAnimation = lottie.loadAnimation({
     container: document.getElementById("-questionIllustration"),
     renderer: "svg",
     autoplay: false,
@@ -40,7 +40,7 @@ var questionAnimation = bodymovin.loadAnimation({
     path: "JSON FILES/theQuestionIllustration.json",
 });
 
-var questionLines = bodymovin.loadAnimation({
+var questionLines = lottie.loadAnimation({
     container: document.getElementById("-questionLines"),
     renderer: "svg",
     autoplay: true,
@@ -48,7 +48,7 @@ var questionLines = bodymovin.loadAnimation({
     path: "JSON FILES/questionLines.json",
 });
 
-var decisionAnimation = bodymovin.loadAnimation({
+var decisionAnimation = lottie.loadAnimation({
     container: document.getElementById("-decisionIllustration"),
     render: "svg",
     autoplay: false,
@@ -56,7 +56,7 @@ var decisionAnimation = bodymovin.loadAnimation({
     path: "JSON FILES/theDecisionIllustration.json",
 });
 
-var decisionLines = bodymovin.loadAnimation({
+var decisionLines = lottie.loadAnimation({
     container: document.getElementById("-decisionLines"),
     render: "svg",
     autoplay: true,
@@ -64,7 +64,7 @@ var decisionLines = bodymovin.loadAnimation({
     path: "JSON FILES/decisionLines.json",
 })
 
-var moveLines = bodymovin.loadAnimation({
+var moveLines = lottie.loadAnimation({
     container: document.getElementById("-moveLines"),
     render: "svg",
     autoplay: true,
@@ -72,7 +72,7 @@ var moveLines = bodymovin.loadAnimation({
     path: "JSON FILES/moveLines.json",
 })
 
-var moveAnimation = bodymovin.loadAnimation({
+var moveAnimation = lottie.loadAnimation({
     container: document.getElementById("-moveIllustration"),
     render: "svg",
     autoplay: false,
@@ -80,7 +80,7 @@ var moveAnimation = bodymovin.loadAnimation({
     path: "JSON FILES/theMoveIllustration.json",
 });
 
-var revealLines = bodymovin.loadAnimation({
+var revealLines = lottie.loadAnimation({
     container: document.getElementById("-revealLines"),
     render: "svg",
     autoplay: true,
@@ -88,7 +88,7 @@ var revealLines = bodymovin.loadAnimation({
     path: "JSON FILES/revealLines.json",
 })
 
-var revealAnimation = bodymovin.loadAnimation({
+var revealAnimation = lottie.loadAnimation({
     container: document.getElementById("-revealIllustration"),
     render: "svg",
     autoplay: false,
@@ -96,7 +96,7 @@ var revealAnimation = bodymovin.loadAnimation({
     path: "JSON FILES/theRevealIllustration.json",
 });
 
-var homeLines = bodymovin.loadAnimation({
+var homeLines = lottie.loadAnimation({
     container: document.getElementById("-homeLines"),
     render: "svg",
     autoplay: true,
@@ -104,7 +104,7 @@ var homeLines = bodymovin.loadAnimation({
     path: "JSON FILES/homeLines.json",
 })
 
-var homeAnimation = bodymovin.loadAnimation({
+var homeAnimation = lottie.loadAnimation({
     container: document.getElementById("-homeIllustration"),
     render: "svg",
     autoplay: false,
