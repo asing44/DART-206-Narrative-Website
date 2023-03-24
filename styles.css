@@ -181,7 +181,7 @@ caption {
 
 ._lines {
     position: absolute;
-    top: 0;
+    top: -5%;
     height: 100%;
     width: 100%;
     z-index: 500;
