@@ -43,10 +43,8 @@ h2 {
 }
 
 h3 {
-    margin: 1rem 0 0.5rem 0;
     font-family: var(--headingFont);
-    font-size: 24px;
-    color: var(--lightHighlight);
+    font-size: 49px;
 }
 
 h4 {
@@ -158,6 +156,13 @@ caption {
     margin: 2em 0 0 2em;
 }
 
+._textSubHeading {
+    margin: 1rem 0 0.5rem 0;
+    font-family: var(--headingFont);
+    font-size: 24px;
+    color: var(--lightHighlight);
+}
+
 ._textBackground {
     position: absolute;
     top: 0;
@@ -176,6 +181,7 @@ caption {
 
 ._lines {
     position: absolute;
+    top: 0;
     height: 100%;
     width: 100%;
     z-index: 500;
