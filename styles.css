@@ -149,7 +149,9 @@ caption {
 }
 
 ._text {
+    display: flex;
     position: absolute;
+    flex-direction: column;
     height: auto;
     max-width: 30%;
     margin: 2em 0 0 2em;
@@ -174,7 +176,7 @@ caption {
 ._lines {
     position: absolute;
     height: 100%;
-    width: 100%;
+    box-sizing: content-box;
     z-index: 500;
 }
 
